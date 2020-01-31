@@ -4,12 +4,14 @@ h = 5;
 
 hw = 5;
 hg = 5;
-count = w / 10-2;
+count = w / (hw+hg);
+difference(){
 cube([w,l,h]);
 
 
 for(i = [1:count]){
-    translate([i * (hw+hg),5,10])
+    translate([i * (hw+hg),5,-1])
     color("pink")
-    cube([hw,l-10,5]);
+    cube([hw,l-10,15]);
+}
 }
